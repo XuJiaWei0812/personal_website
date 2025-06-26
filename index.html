@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- Favicon (可選) -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation" aria-label="主要導覽">
         <div class="container">
             <!-- 品牌標誌 -->
-            <a class="navbar-brand" href="#" aria-label="回到首頁">徐家偉</a>
+            <a class="navbar-brand" href="#home" aria-label="回到首頁">徐家偉</a>
 
             <!-- 手機版選單按鈕 -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -63,8 +63,11 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7 text-center">
                     <!-- 個人頭像 -->
-                    <img src="image/sticker.jpg" class="rounded-circle mb-4" alt="徐家偉的個人頭像" loading="lazy"
-                        style="width: 200px; height: 200px; object-fit: cover;">
+                    <!-- 修改後的程式碼 -->
+                    <div class="profile-img-container shadow-lg">
+                        <img src="image/sticker.jpg" alt="我的大頭貼" class="profile-img">
+                    </div>
+
 
                     <!-- 個人資訊 -->
                     <h1 id="hero-title" class="display-4 fw-bold mb-3">徐家偉</h1>
@@ -219,7 +222,7 @@
     </section> -->
 
     <!-- 接案服務說明區塊 -->
-    <section id="services" class="section-padding bg-light px-4" aria-labelledby="services-title">
+    <section id="services" class="section-padding px-4" aria-labelledby="services-title">
         <div class="container">
             <!-- 區塊標題 -->
             <div class="row">
@@ -415,15 +418,15 @@
                 <!-- 頁尾社群連結 -->
                 <div class="col-md-6 text-md-end">
                     <div class="social-links" role="group" aria-label="頁尾社群媒體連結">
-                        <a href="https://github.com/XuJiaWei0812" class="text-white text-decoration-none me-3"
+                        <a href="https://github.com/XuJiaWei0812" class="text-decoration-none me-3"
                             aria-label="GitHub">
                             <i class="bi bi-github" aria-hidden="true"></i>
                         </a>
-                        <a href="mailto:h79jkl345@gmail.com" class="text-white text-decoration-none me-3"
+                        <a href="mailto:h79jkl345@gmail.com" class="text-decoration-none me-3"
                             aria-label="Email">
                             <i class="bi bi-envelope" aria-hidden="true"></i>
                         </a>
-                        <a href="https://line.me/ti/p/uGTFA87Uiu" class="text-white text-decoration-none"
+                        <a href="https://line.me/ti/p/uGTFA87Uiu" class="text-decoration-none"
                             aria-label="Line">
                             <i class="bi bi-line" aria-hidden="true"></i>
                         </a>
