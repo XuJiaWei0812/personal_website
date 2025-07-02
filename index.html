@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!-- 基本 Meta 標籤 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="徐家偉的個人介紹網站">
+    <meta name="keywords" content="網頁工程師,前端開發,社群經營,React,Python,作品集">
+    <meta name="author" content="徐家偉">
+
+    <!-- 網站標題 -->
+    <title>徐家偉 XuJiaWei</title>
+
+    <!-- 外部 CSS 框架 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- 自定義樣式 -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Favicon (可選) -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <!-- 導覽列區塊 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation" aria-label="主要導覽">
+        <div class="container">
+            <!-- 品牌標誌 -->
+            <a class="navbar-brand" href="#home" aria-label="回到首頁">徐家偉</a>
+
+            <!-- 手機版選單按鈕 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="切換導覽選單">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 導覽選單項目 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" aria-label="關於我">關於我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience" aria-label="經歷技能">技能經歷</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#portfolio" aria-label="我的作品">作品展示</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" aria-label="接案服務">接案服務</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容區域 -->
+    <!-- 個人簡介區塊 - 置中版 -->
+    <section id="about" class="hero-section px-4" aria-labelledby="hero-title">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7 text-center">
+                    <!-- 個人頭像 -->
+                    <!-- 修改後的程式碼 -->
+                    <div class="profile-img-container shadow-lg">
+                        <img src="images/sticker.jpg" alt="我的大頭貼" class="profile-img">
+                    </div>
+
+
+                    <!-- 個人資訊 -->
+                    <h1 id="hero-title" class="display-4 fw-bold mb-3">徐家偉</h1>
+                    <h2 class="mb-4 text-subtitle">程式設計 ✘ 社群經營</h2>
+                    <p class="lead mb-4">
+                        專業是網頁開發與 Python 程式設計，基於對社群經營的興趣，主動學習文案撰寫、影片剪輯及美編排版等技能，
+                        期望我的技術能力，能為您提供服務。
+                    </p>
+
+                    <!-- 社群媒體連結 -->
+                    <div class="social-links" role="group" aria-label="社群媒體連結">
+                        <a href="https://github.com/XuJiaWei0812" class="text-decoration-none" aria-label="GitHub 個人檔案">
+                            <i class="bi bi-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.threads.net/@awu.wusheng" class="text-decoration-none"
+                            aria-label="Threads 個人檔案">
+                            <i class="bi bi-threads" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/awu.wusheng/" class="text-decoration-none"
+                            aria-label="Instagram 個人檔案">
+                            <i class="bi bi-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:h79jkl345@gmail.com" class="text-decoration-none" aria-label="電子郵件聯絡">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://line.me/ti/p/uGTFA87Uiu" class="text-decoration-none" aria-label="Line 好友添加">
+                            <i class="bi bi-line" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 經歷與專業技能區塊 -->
+    <section id="experience" class="section-padding bg-light px-4" aria-labelledby="experience-title">
+        <div class="container">
+            <!-- 區塊標題 -->
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 id="experience-title" class="display-5 fw-bold">技能與經歷</h2>
+                    <p class="lead">我的專業技能與工作經歷</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- 專業技能區域 -->
+                <div class="col-lg-6 mb-5">
+                    <h3 class="mb-4">專業技能</h3>
+
+                    <!-- 前端技術 -->
+                    <div class="skill-category mb-4">
+                        <p class="h5 fw-bold mb-3">前端技術</p>
+                        <div class="skill-tags">
+                            <span class="badge bg-primary skill-badge">HTML</span>
+                            <span class="badge bg-primary skill-badge">CSS</span>
+                            <span class="badge bg-primary skill-badge">JavaScript</span>
+                            <span class="badge bg-primary skill-badge">JQuery</span>
+                            <span class="badge bg-primary skill-badge">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <!-- 後端技術 -->
+                    <div class="skill-category mb-4">
+                        <p class="h5 fw-bold mb-3">後端技術</p>
+                        <div class="skill-tags">
+                            <span class="badge bg-info skill-badge">Python</span>
+                            <span class="badge bg-info skill-badge">FastAPI</span>
+                            <span class="badge bg-info skill-badge">MariaDB</span>
+                            <span class="badge bg-info skill-badge">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- 文書工具 -->
+                    <div class="skill-category mb-4">
+                        <p class="h5 fw-bold mb-3">文書工具</p>
+                        <div class="skill-tags">
+                            <span class="badge bg-primary skill-badge">Word</span>
+                            <span class="badge bg-primary skill-badge">Excel</span>
+                            <span class="badge bg-primary skill-badge">PowerPoint</span>
+                        </div>
+                    </div>
+
+                    <!-- 其他工具 -->
+                    <div class="skill-category">
+                        <p class="h5 fw-bold mb-3">其他工具</p>
+                        <div class="skill-tags">
+                            <span class="badge bg-info skill-badge">Git</span>
+                            <span class="badge bg-info skill-badge">GitHub</span>
+                            <span class="badge bg-info skill-badge">Canva</span>
+                            <span class="badge bg-info skill-badge">CapCut</span>
+                            <span class="badge bg-info skill-badge">ChatGPT</span>
+                            <span class="badge bg-info skill-badge">Midjourney</span>
+                            <span class="badge bg-info skill-badge">Perplexity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 工作經歷區域 -->
+                <div class="col-lg-6">
+                    <h3 class="mb-4">工作經歷：年資 3 ~ 4 年</h3>
+
+                    <!-- 經歷項目 1 -->
+                    <article class="timeline-item">
+                        <p class="h5 fw-bold">個人網路接案</p>
+                        <p class="text-muted mb-2">自由工作者</p>
+                        <p>承接網頁前端切版、API 串接整合、網路爬蟲開發、短影片剪輯等委託案件，負責需求分析到成品交付的完整流程。</p>
+                    </article>
+
+                    <!-- 經歷項目 2 -->
+                    <article class="timeline-item">
+                        <p class="h5 fw-bold">程式外包工作室</p>
+                        <p class="text-muted mb-2">網頁前端工程師</p>
+                        <p>負責網頁前端開發、網路爬蟲開發、API串接整合等工作，並協助處理專案管理及客戶需求分析等事務。</p>
+                    </article>
+
+                    <!-- 經歷項目 3 -->
+                    <article class="timeline-item">
+                        <p class="h5 fw-bold">蝦皮網拍工作室</p>
+                        <p class="text-muted mb-2">電商助理</p>
+                        <p>協助蝦皮賣場日常營運管理，包含商品上架、訂單處理、客戶諮詢回覆及庫存管理，熟悉電商平台操作流程。</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集區塊 -->
+    <!-- <section id="portfolio" class="section-padding" aria-labelledby="portfolio-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 id="portfolio-title" class="display-5 fw-bold">我的作品</h2>
+                    <p class="lead">精選專案作品展示</p>
+                </div>
+            </div>
+
+            <div class="row" role="grid">
+                <div class="col-md-6 col-lg-4 mb-4" role="gridcell">
+                    <article class="card h-100 portfolio-card">
+                        <img src="image/portfolio01.jpg" class="card-img-top" alt="作品001專案截圖" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="card-title h5">作品001</h3>
+                            <p class="card-text">作品001內容
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 接案服務說明區塊 -->
+    <section id="services" class="section-padding px-4" aria-labelledby="services-title">
+        <div class="container">
+            <!-- 區塊標題 -->
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 id="services-title" class="display-5 fw-bold">接案服務</h2>
+                    <p class="lead">我的接案項目內容與報價</p>
+                </div>
+            </div>
+
+            <!-- 服務項目手風琴 -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="servicesAccordion" role="tablist">
+
+                        <!-- 服務項目 1: Python 網路爬蟲開發 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                    role="tab">
+                                    Python 網路爬蟲開發
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#servicesAccordion" role="tabpanel">
+                                <div class="accordion-body">
+                                    <dl class="service-details">
+                                        <dt>服務內容：</dt>
+                                        <dd>客戶提供要爬取的網站連結、需要抓取的資料項目，以及要將資料儲存成何種格式。會在1-2個工作日內製作爬蟲 Demo 供您確認。需求確認完畢後，討論製作時間與服務費用。</dd>
+
+                                        <dt>服務價格：</dt>
+                                        <dd>NT$ 5,000 起，會先收取 30% 作為定金</dd>
+
+                                        <dt>聯絡方式：</dt>
+                                        <dd>請透過 h79jkl345@gmail.com 信箱聯繫，我會在 24 小時內回覆您。</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 服務項目 2: SRT 中文字幕聽打 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                    role="tab">
+                                    SRT 中文字幕聽打
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#servicesAccordion" role="tabpanel">
+                                <div class="accordion-body">
+                                    <dl class="service-details">
+                                        <dt>服務內容：</dt>
+                                        <dd>客戶將聽打素材上傳至 Google 雲端，討論並確認聽打需求、音訊品質、製作時間與服務報價，完成後提供 SRT 或逐字稿供您審核修正。</dd>
+
+                                        <dt>服務價格：</dt>
+                                        <dd>1. SRT檔案 1分鐘 40 台幣 (中文)</dd>
+                                        <dd>2. 逐字稿 1分鐘 30 台幣 (中文)</dd>
+
+                                        <dt>聯絡方式：</dt>
+                                        <dd>請透過 h79jkl345@gmail.com 信箱聯繫，我會在 24 小時內回覆您。</dd>
+
+                                        <dt>委託精選：</dt>
+                                        <dd>
+                                            <span>1.</span>
+                                            <a href="https://youtu.be/nAtujJm5PNc?si=9e7jjyu8WjbeJ9cZ" class="link-dark"
+                                                target="_blank">
+                                                【Joeman】9999元的奢華吃到飽對決369元的平價吃到飽【Joe是要對決S2】Ep95
+                                            </a>
+                                        </dd>
+                                        <dd>
+                                            <span>2.</span>
+                                            <a href="https://youtu.be/ZFIbYRhg51Q?si=QQN1MVUrN1SW_g3N" class="link-dark"
+                                                target="_blank">
+                                                【Joeman】2580元的奢華肉乾對決320元的平價肉乾【Joe是要對決S2】Ep92
+                                            </a>
+                                        </dd>
+                                        <dd>
+                                            <span>3.</span>
+                                            <a href="https://youtu.be/-O6KrLArJVw?si=ENCqAo39z3F-96rD" class="link-dark"
+                                                target="_blank">
+                                                【單車悠遊彰化苗木之鄉｜永靖巡禮超讚行程滿滿滿【LindaLovesCycling】
+                                            </a>
+                                        </dd>
+                                        <dd>
+                                            <span>4.</span>
+                                            <a href="https://youtu.be/pcpTMlbo86Q?si=Un8v4jJqIBPGbxOq" class="link-dark"
+                                                target="_blank">
+                                                《翻岳2》搭乘藏王纜車去看樹冰大軍🌲｜來銀山溫泉當神隱少女♨️
+                                            </a>
+                                        </dd>
+                                        <dd>
+                                            <span>5.</span>
+                                            <a href="https://youtu.be/aG0pRJRTMAg?si=NTaQ6DaTuYJa8YMY" class="link-dark"
+                                                target="_blank">
+                                                〖卡特〗揭秘頻道”20萬Q&A”有人離職了嗎？！為什麼有新成員的加入...！
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 服務項目 3: YT、TK 短影片剪輯 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                    role="tab">
+                                    YT、TK 影片剪輯
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#servicesAccordion" role="tabpanel">
+                                <div class="accordion-body">
+                                    <dl class="service-details">
+                                        <dt>服務內容：</dt>
+                                        <dd>客戶將剪輯素材上傳至 Google 雲端，討論並確認影片素材、剪輯需求、製作時間與服務報價，完成後提供初版供您審核修正。</dd>
+
+                                        <dt>服務價格：</dt>
+                                        <dd>1. 短影片 : 0秒~30秒 300台幣、31秒~60秒 500台幣、61秒~90秒 700台幣、91秒~120秒 900台幣</dd>
+                                        <dd>2. 長影片 : 1分鐘 300 台幣 (5分鐘以上算長影片)</dd>
+                                        <dd>3. 純字幕 : 1分鐘 100 台幣</dd>
+
+                                        <dt>聯絡方式：</dt>
+                                        <dd>請透過 h79jkl345@gmail.com 信箱聯繫，我會在 24 小時內回覆您。</dd>
+
+                                        <dt>委託精選：</dt>
+                                        <dd>
+                                            <span>1.</span>
+                                            <a href="https://drive.google.com/file/d/1aO4wu6loYxnPoXxKL_tir53Qa9yr41Bm/view"
+                                                class="link-dark" target="_blank">
+                                                BR電商(TikTok) 電商市場競爭解法
+                                            </a>
+                                        </dd>
+                                        <dd>
+                                            <span>2.</span>
+                                            <a href="https://drive.google.com/file/d/1_mHoqVsYP_aYX_h-3M3Wja6jahINfm7Q/view"
+                                                class="link-dark" target="_blank">
+                                                BR電商(TikTok) 蝦皮中小賣家陣亡
+                                            </a>
+                                        </dd>
+                                        <dd>
+                                            <span>3.</span>
+                                            <a href="https://drive.google.com/file/d/1REF8NK8EbR0mFB0Osl1iph7hU8OPp2dd/view"
+                                                class="link-dark" target="_blank">
+                                                BR電商(TikTok) 電商創業要多少錢】
+                                            </a>
+                                        </dd>
+                                        <dd>
+                                            <span>4.</span>
+                                            <a href="https://drive.google.com/file/d/1PGUARyuic1TP3BpJYysJefXMSVRx3zXl/view"
+                                                class="link-dark" target="_blank">
+                                                2023 新青安貸款
+                                            </a>
+                                        </dd>
+                                        <dd>
+                                            <span>5.</span>
+                                            <a href="https://drive.google.com/file/d/129f9-ob-LICPK7FpPy-swWYsx3xdNXY3/view"
+                                                class="link-dark" target="_blank">
+                                                6個新手買房重點
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- 網站頁尾 -->
+    <footer class="py-4" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- 版權聲明 -->
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 徐家偉. All Rights Reserved.</p>
+                </div>
+
+                <!-- 頁尾社群連結 -->
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links" role="group" aria-label="頁尾社群媒體連結">
+                        <a href="https://github.com/XuJiaWei0812" class="text-decoration-none me-3"
+                            aria-label="GitHub">
+                            <i class="bi bi-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:h79jkl345@gmail.com" class="text-decoration-none me-3"
+                            aria-label="Email">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://line.me/ti/p/uGTFA87Uiu" class="text-decoration-none"
+                            aria-label="Line">
+                            <i class="bi bi-line" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 檔案載入 -->
+    <!-- Bootstrap 框架 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 自定義功能 JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

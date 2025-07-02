@@ -1,0 +1,487 @@
+/* ===================================
+CSS 變數定義
+=================================== */
+:root {
+    /* 顏色變數 */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-blue: #667eea;
+    --primary-purple: #764ba2;
+    --accent-gold: #ffd700;
+    --dark-bg: #343a40;
+    --light-bg: #f8f9fa;
+    --text-muted: #6c757d;
+    
+    /* 間距設定 */
+    --section-padding: 80px;
+    --section-padding-mobile: 60px;
+    
+    /* 動畫時間 */
+    --transition-fast: 0.3s;
+    --transition-normal: 0.6s;
+    
+    /* 陰影效果 */
+    --box-shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================
+基礎樣式重置與設定
+=================================== */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 焦點處理 */
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+.navbar-brand:focus-visible,
+.navbar-nav .nav-link:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+/* ===================================
+版面配置樣式
+=================================== */
+.section-padding {
+    padding: var(--section-padding) 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 120px 0 var(--section-padding) 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section .lead {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-section .social-links {
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Hero Section 裝飾效果 */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.text-subtitle {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+}
+
+/* ===================================
+導覽列樣式
+=================================== */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white !important;
+    transition: color var(--transition-fast) ease;
+}
+
+.navbar-brand:hover {
+    color: var(--accent-gold) !important;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color var(--transition-fast) ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-gold) !important;
+}
+
+/* 導覽列連結下劃線效果 */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-gold);
+    transition: all var(--transition-fast) ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+/* 活動導覽項目樣式 */
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link.active {
+    color: var(--accent-gold) !important;
+    font-weight: 600;
+}
+
+/* ===================================
+社群連結樣式
+=================================== */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform var(--transition-fast) ease, color var(--transition-fast) ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+}
+
+.social-links a:hover {
+    color: var(--accent-gold);
+    transform: scale(1.15);
+}
+
+/* ===================================
+技能標籤樣式
+=================================== */
+.skill-category {
+    margin-bottom: 1.5rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all var(--transition-fast) ease;
+    cursor: default;
+    border: 2px solid transparent;
+    animation: fadeInUp var(--transition-normal) ease-out;
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-light);
+    border-color: currentColor;
+}
+
+/* 動畫延遲 */
+.skill-badge:nth-child(1) { animation-delay: 0.1s; }
+.skill-badge:nth-child(2) { animation-delay: 0.2s; }
+.skill-badge:nth-child(3) { animation-delay: 0.3s; }
+.skill-badge:nth-child(4) { animation-delay: 0.4s; }
+.skill-badge:nth-child(5) { animation-delay: 0.5s; }
+
+/* ===================================
+作品集樣式
+=================================== */
+.portfolio-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-light);
+    transition: all var(--transition-fast) ease;
+    height: 100%;
+    animation: fadeInUp var(--transition-normal) ease-out;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.portfolio-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform var(--transition-fast) ease;
+}
+
+.portfolio-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.portfolio-card .card-title {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.portfolio-card .card-body {
+    padding: 1.5rem;
+}
+
+/* ===================================
+時間軸樣式
+=================================== */
+.timeline-item {
+    border-left: 3px solid var(--primary-blue);
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    animation: fadeInUp var(--transition-normal) ease-out;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 13px;
+    height: 13px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--primary-blue);
+    transition: all var(--transition-fast) ease;
+}
+
+.timeline-item:hover::before {
+    background-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px var(--accent-gold);
+}
+
+/* ===================================
+服務項目樣式
+=================================== */
+.service-details {
+    margin: 0;
+}
+
+.service-details dt {
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-details dt:first-child {
+    margin-top: 0;
+}
+
+.service-details dd {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--light-bg);
+}
+
+/* ===================================
+頁尾樣式
+=================================== */
+footer {
+    background-color: var(--dark-bg);
+    color: white;
+    border-top: 3px solid var(--primary-blue);
+}
+
+footer .social-links a {
+    color: white;
+    font-size: 1.2rem;
+    transition: transform var(--transition-fast) ease, color var(--transition-fast) ease;
+}
+
+footer .social-links a:hover {
+    color: var(--accent-gold);
+    transform: scale(1.15);
+}
+
+/* ===================================
+動畫效果
+=================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+響應式設計
+=================================== */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: var(--section-padding-mobile) 0;
+    }
+
+    .hero-section {
+        padding: 100px 0 var(--section-padding-mobile) 0;
+        min-height: auto;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .skill-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .timeline-item {
+        padding-left: 1rem;
+    }
+
+    .timeline-item::before {
+        left: -6px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero-section {
+        padding: 80px 0 var(--section-padding-mobile) 0;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    .skill-tags {
+        justify-content: center;
+    }
+}
+
+/* ===================================
+輔助功能
+=================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media (prefers-contrast: high) {
+    :root {
+        --box-shadow-light: 0 2px 10px rgba(0, 0, 0, 0.5);
+        --box-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .portfolio-card {
+        border: 2px solid #000;
+    }
+}
+
+@media print {
+    .navbar,
+    .social-links,
+    footer {
+        display: none !important;
+    }
+
+    * {
+        color: #000 !important;
+        background: white !important;
+    }
+
+    .portfolio-card,
+    .timeline-item {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+    }
+}
+
+
+/* ===================================
+頭像樣式優化
+=================================== */
+.profile-img-container {
+    width: 200px;  /* 您可以自訂想要的寬度 */
+    height: 200px; /* 高度應與寬度相同以形成正圓 */
+    border-radius: 50%;
+    overflow: hidden; /* 隱藏圖片超出圓形範圍的部分 */
+    margin: 0 auto 2rem; /* 水平置中並增加下方間距 */
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 關鍵：讓圖片等比例填滿容器，多餘部分會被裁切 */
+    object-position: center; /* 將圖片置中顯示 */
+}
